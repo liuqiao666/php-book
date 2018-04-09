@@ -1,0 +1,360 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css"><!--品牌介绍样式链接-->
+    
+    
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">   <!--字体样式及品牌介绍样式--> 
+
+
+	<!-- Theme style  -->
+	  <link rel="stylesheet" href="css/style.css"> <!-- 导航条等字体样式、字体外形样式  -->
+    
+    
+    
+    
+<style type="text/css">
+*{margin:0;padding:0;}
+     <!--ul,li{list-style:none;}-->
+img{border:0;}
+.wrapper{
+	width: 1350px;
+	/*  margin: 0 auto;        方框四边与其他元素之间的空白距离*/
+	/*   padding-bottom:0;     边框与内部元素的距离*/
+}
+#focus{
+	width:1350px;
+	height:500px;
+	overflow: hidden;     /*  内容会被修剪，元素框外面的内容不会被显示，浏览器不会显示滚动条。*/
+	/*   position: relative;    位置被设置为 relative 的元素，可将其定位于相对于其正常位置的地方，因此 "left:20" 会将元素移至元素正常位置左边 20 个像素的位置。*/
+}
+
+
+#focus ul{
+	height:500px;
+	/*position: absolute;位置设置为 absolute 的元素，可定位于相对于第一个已定位（非静态的）的包含它的元素的指 定坐标。此元素的位置可通过 "left"、"top"、"right" 以及 "bottom" 属性来规定。
+	left: 5px;
+	top: 1px;*/
+}
+#focus ul li{
+	/*float: left;*/
+	width:  1350px;
+	height:500px;
+	overflow: hidden;/**/
+	/*position: relative;*/
+	background: #000;
+}
+
+
+#focus ul li div{
+	position: absolute;/*位置设置为 absolute 的元素，可定位于相对于第一个已定位（非静态的）的包含它的元素的指 定坐标。此元素的位置可通过 "left"、"top"、"right" 以及 "bottom" 属性来规定。
+	left: 5px;
+	top: 1px; */
+	overflow: hidden;
+}
+
+
+/*设置图片轮播左边控件样式*/
+#focus .preBtn{
+	width:45px;
+	height: 100px;	
+	left: 0;
+	top:750px;/*控件距离页面高度*/
+	background:url(images2/spirte.png) no-repeat 0 0;/*左边*/
+	background-color:#000;/*背景色为黑色*/
+	cursor: pointer;     /*光标呈现为指示链接的指针（一只手）。*/
+	opacity:0.4;        /* 设置背景色的不透明度。*/
+	/*filter:alpha(opacity=40);设置背景的透明度*/
+}
+
+/*设置图片轮播右边控件样式*/
+#focus .nextBtn{
+	width:45px;
+	height: 100px;
+	right:0px;
+	top:750px;/*控件距离页面高度*/
+	background:url(images2/spirte.png) no-repeat right top; /*右边*/
+	background-color:#000;/*背景色为黑色*/
+	cursor: pointer;     /*光标呈现为指示链接的指针（一只手）。*/
+	opacity:0.4;        /* 设置背景色的不透明度。*/
+	/*filter:alpha(opacity=40);设置背景的透明度*/
+}
+
+
+
+<!--
+ul#nav{ width:100%; height:60px; background:#000; margin:0 auto; padding:5px} 
+ul#nav li{display:inline; height:60px} 
+ul#nav li a{display:inline-block; padding:0 20px; height:60px; line-height:60px; color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:20px;} 
+
+.box1{float:left; width:20%; height:170px}ul#nav li a:hover{ background:#FCF; color:#F3F}/*设置鼠标滑过或悬停时变化的背景颜色*/
+
+.box2{float:right; width:20%; height:300px}
+.box3{width:100%; height:50px; clear:both}
+-->
+
+
+.sale{ width:1330px; height:auto; font-family:"黑体"; color:#F00; font-size:24px; -webkit-border-radius:0.5em;background:url(images/%E6%A0%91%E5%8F%B62.png);}
+
+
+
+
+.wrap a {display:block; width:446px; height:530px; text-decoration:none; color:#000;}
+.wrap {width:449px; height:530px; position:relative; overflow:hidden; font-family:arial, sans-serif; border:solid #F9F; margin:0 0px; float:left; display:inline;  -webkit-border-radius:2em;}
+.wrap img {border:0;}
+.wrap i {display:block; width:449px; height:530px; position:absolute; left:0; top:495px; z-index:1; background:#000; filter: alpha(opacity=40);/*显示文字内容的阴影区域 top为阴影区域距上边框490px*/
+ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40); opacity:0.40;
+ -webkit-transition: all 0.6s ease-in-out; }
+.wrap p {
+	display: block;
+	width: 420px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 495px;
+	z-index: 1;
+	background: transparent;
+	font-size: 12px;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	line-height: 16px;/*显示的文字宽度 top为文字距上边框495px*/
+	-webkit-transition: all 0.6s ease-in-out;
+}
+.wrap p b {display:block; font-size:22px; color:#FF0; text-align:center; margin:0; padding:0; line-height:30px;}
+.wrap p span {display:block; padding:10px; line-height:40px;}
+.wrap span{ font:normal 26px "黑体";}
+
+.wrap a:hover {direction:ltr;}
+.wrap a:hover i {top:0;}
+.wrap a:hover p {top:0;}
+ 
+.clear {clear:left;}
+ 
+
+
+
+    
+</style>   
+    
+   
+   
+ <script type="text/javascript">
+	var picsArr=new Array();            <!--定义数组用于图片轮播-->
+		picsArr[0]="images/三星手机.png";
+		picsArr[1]="images/三星车.png";
+		picsArr[2]="images/杨静.png";
+		picsArr[3]="images/三星手机手机.png";
+		picsArr[4]="images/sx_1.png";
+		picsArr[5]="images/sx_2.png";
+		picsArr[6]="images/sx_3.png";	
+	var timer,index=0;	
+	window.onload=showPic;
+	
+	function showPic()
+	{
+		document.getElementById("pic").src=picsArr[index];
+		if(index<(picsArr.length-1))
+			index++;
+		else
+			index=(index+1)%picsArr.length;
+		timer=setTimeout("showPic()",2000);<!--设置图片轮播时间-->
+	}
+	function showNext()
+	{
+		
+		clearTimeout(timer);
+		showPic();
+		
+	}
+	
+	function showPre()
+	{
+		clearTimeout(timer);
+		showPrepic();
+		
+	}
+	
+	function showPrepic()
+	{		
+		if(index>0)
+			index--;
+		else
+			index=4;
+		document.getElementById("pic").src=picsArr[index];
+		timer=setTimeout("showPrepic()",2000);
+	}
+	
+	
+</script>  
+   
+   
+    
+	</head>
+	<body background="images/金色.jpg">
+    
+    
+    
+<center>
+<ul id="nav"> 
+<li><a href="index.html">主页</a></li> 
+
+<li><a href="精美配件.html">精美配件</a></li> 
+<li><a href="#">关于我们</a></li> 
+<li><a href="/zz/register.php">注册</a></li>
+<li><a href="/zz/login.php">登录</a></li>
+</ul> 
+</center>
+
+<header><img src="images/三星三星三星.png"></header>    
+    
+    
+    
+
+
+
+<div class="wrapper">
+  <div id="focus">
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/三星图片.jpg" alt="" id="pic"/></a>
+        <div class="preBtn" onClick="showPre()"></div>
+        <div class="nextBtn" onClick="showNext()"></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="wrap"> 
+<a href="#x"><!--鼠标悬停在图片上向上滑动显示文字-->
+	<img src="images/绮梦金.png" alt='' /> 
+    	<i></i> <!--设置显示文字区域为半透明-->
+	<p> 
+		<b>绮梦金 S8|S8+ ￥5688|￥6188</b> 
+		<span>
+       三色可选<br>
+       设计   全视曲面屏<br>
+       性能   防尘防水 风驰电掣<br>
+       安全   简单可靠更胜一筹 <br>
+	   摄像头  疾速对焦摄像头
+        
+        </span> 
+	</p> 
+</a> 
+</div> <!-- end wrap --> 
+ 
+<div class="wrap"> 
+<a href="#x"> 
+	<img src="images/三星谜夜黑.png" alt='' /> 
+	<i></i> 
+	<p> 
+		<b>谜夜黑 S8|S8+ ￥5688|￥6188</b> 
+		<span>预装应用<br /><br /> 
+		基本应用/不可卸载19个<br/>
+        推荐应用/可卸载19个
+		</span> 
+	</p> 
+</a> 
+</div> <!-- end wrap --> 
+ 
+<div class="wrap"> 
+<a href="#x"> 
+	<img src="images/烟晶灰.png" alt='' /> 
+	<i></i> 
+	<p> 
+		<b>烟晶灰 S8|S8+ ￥5688|￥6188</b> 
+		<span>
+         规格参数<br>
+		盖乐世 S8(64GB)<br>
+		盖乐世 S8 4G+(64GB)<br>
+		盖乐世 S8+(64GB)<br>
+		盖乐世 S8+(128GB）
+		
+		</span> 
+	</p> 
+</a> 
+</div>
+<br><br>
+<div align="center"></div>
+<br><br>
+
+
+
+<p align="center">
+<button class="sale">
+<A href="登录.html">马上购买</A>
+</button>
+</p>
+
+
+
+	
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>欢迎光临！</h4>
+					<p>希望你在此能够挑到适合你的手机品牌和型号。近期我们将会有更多的品牌上线，敬请期待！谢谢支持！</p>
+				</div>
+				<div class="col-md-4 col-md-push-1">
+					<h4>品牌</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="OPPO专栏.html">oppo</a></li>
+						<li><a href="小米专栏.html">小米</a></li>
+						<li><a href="三星专栏.html">三星</a></li>
+						<li><a href="魅族专栏.html">魅族</a></li>
+						<li><a href="#">iphone(还未上线，敬请期待！)</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>友情链接</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="http://www.jd.com/">京东</a></li>
+						<li><a href="http://uland.taobao.com/">淘宝</a></li>
+						<li><a href="http://www.vip.com/">唯品会</a></li>
+						<li><a href="http://hd.jumei.com/">聚美优品</a></li>
+						<li><a href="http://www.baidu.com/">百度一下</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="row copyright"></div>
+
+	  </div>
+  </footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,352 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS-魅族专栏</title>
+	
+	<!-- Animate.css ---页面总体CSS样式->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="../css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="../css/style.css">
+    
+    <!--jQuery橙色简约在线客服代码-->
+    <link href="../css/style (3).css"rel="stylesheet" type="text/css"/>
+   
+</head>
+	<body>
+    
+<!--导航栏部分-->
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="top-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7 text-left menu-1">
+								<ul>
+									<li class="active"><a href="../index.html">主页</a></li>
+									<li><a href="../精美配件.html">精美配件</a></li>
+									<li>
+										<a href="../魅族专栏.html">魅族专栏</a></li>
+									<li><a href="/zz/register.php">注册</a></li>
+									<li><a href="/zz/login.php">登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+    
+<!--jQuery橙色简约在线客服js代码-->
+    <script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+<script>
+$(function() {
+	// 悬浮窗口
+	$(".yb_conct").hover(function() {
+		$(".yb_conct").css("right", "5px");
+		$(".yb_bar .yb_ercode").css('height', '200px');
+	}, function() {
+		$(".yb_conct").css("right", "-127px");
+		$(".yb_bar .yb_ercode").css('height', '53px');
+	});
+	// 返回顶部
+	$(".yb_top").click(function() {
+		$("html,body").animate({
+			'scrollTop': '0px'
+		}, 300)
+	});
+});
+</script>
+
+<!--图片部分js和样式-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="../fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("a#example1").fancybox();
+
+			$("a#example2").fancybox({
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'elastic'
+			});
+
+			$("a#example3").fancybox({
+				'transitionIn'	: 'none',
+				'transitionOut'	: 'none'	
+			});
+
+			$("a#example4").fancybox({
+				'opacity'		: true,
+				'overlayShow'	: false,
+				'transitionIn'	: 'elastic',
+				'transitionOut'	: 'none'
+			});
+
+			$("a#example5").fancybox();
+
+			$("a#example6").fancybox({
+				'titlePosition'		: 'outside',
+				'overlayColor'		: '#000',
+				'overlayOpacity'	: 0.9
+			});
+
+			$("a#example7").fancybox({
+				'titlePosition'	: 'inside'
+			});
+
+			$("a#example8").fancybox({
+				'titlePosition'	: 'over'
+			});
+
+			$("a[rel=example_group]").fancybox({
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'titlePosition' 	: 'over',
+				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+				}
+			});
+
+			/*
+			*   Examples - various
+			*/
+
+			$("#various1").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+			$("#various2").fancybox();
+
+			$("#various3").fancybox({
+				'width'				: '75%',
+				'height'			: '75%',
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none',
+				'type'				: 'iframe'
+			});
+
+			$("#various4").fancybox({
+				'padding'			: 0,
+				'autoScale'			: false,
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+		});
+	</script>
+
+<!--动态显示时间-->
+<marquee behavior="scroll" scrollamount="6" direction="right">
+<script type="text/javascript">
+	var week,today,week_i;
+	week = new Array("星期一","星期二","星期三","星期四","星期五","星期六","星期天");
+	today = new Date();
+	week_i = today.getDay();//返回0~6之间的一个整数，代表一周中的某一天；
+	document.write(today.toLocaleDateString()+week[week_i]);
+</script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+欢迎来到手机销售网站！</marquee>
+
+<!--jQuery橙色简约在线客服代码-->
+<div class="yb_conct">
+  <div class="yb_bar">
+    <ul>
+     <a href="魅蓝E2.html"><li class="yb_top">返回顶部</li></a>
+      <li class="yb_phone">13208-166-720</li>
+      <li class="yb_QQ">
+<a  href="../登录.html">在线咨询</a>
+      </li>
+      <li class="yb_ercode" style="height:53px;">微信二维码 <br>
+        <img class="hd_qr" src="../images/weixin.jpg"width="125" alt="关注你附近"> </li>
+    </ul>
+  </div>
+</div>
+
+<!--模块1--图片的放置-->
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-10 col-md-offset-1 slider-text">
+						   				<div class="slider-text-inner">		
+              <a rel="example_group" href="../images/example/9_b.jpg" ><img alt="" src="../images/example/9_s.jpg" /></a>
+              <a rel="example_group" href="../images/example/10_b.jpg" ><img alt="" src="../images/example/10_s.jpg" /></a>
+        	  <a rel="example_group" href="../images/example/11_b.jpg"><img alt="" src="../images/example/11_s.jpg"/></a>
+        		<a rel="example_group" href="../images/example/12_b.jpg"><img class="last" alt="" src="../images/example/12_s.jpg" /></a>
+ &nbsp; &nbsp; <a rel="example_group"href="../images/example/13_b.jpg"><img alt="" src="../images/example/13_s.jpg" /></a>
+                        <h4>
+                        <br><br>
+                        
+<!--评论内容显示或隐藏部分-->
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	//隐藏除第一条之外的所有评论的内容
+	$(".message_list .message_body:gt(0)").hide();
+
+	//单击标题，其对应的评论内容显示或隐藏
+	$(".message_head").click(function(){
+		$(this).next(".message_body").slideToggle(500)
+	});
+
+	//折叠所有评论
+	$(".collpase_all_message").click(function(){
+		$(".message_body").slideUp(500);
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+<!--悬浮窗口js-->
+<script>
+$(function() {
+	// 悬浮窗口
+	$(".yb_conct").hover(function() {
+		$(".yb_conct").css("right", "5px");
+		$(".yb_bar .yb_ercode").css('height', '200px');
+	}, function() {
+		$(".yb_conct").css("right", "-127px");
+		$(".yb_bar .yb_ercode").css('height', '53px');
+	});
+	// 返回顶部
+	$(".yb_top").click(function() {
+		$("html,body").animate({
+			'scrollTop': '0px'
+		}, 300)
+	});
+});
+</script>
+
+<ol class="message_list">
+	
+    <li>
+		<p class="message_head"><cite>主屏尺寸</cite></p>
+		<div class="message_body">
+			<p>主屏尺寸：5.5英寸
+
+主屏分辨率：1920x1080像素
+
+后置摄像头：1300万像素
+
+前置摄像头：500万像素
+
+电池容量：4000mAh
+
+核心数： 真八核
+
+内存：3GB/4GB</p>
+		</div>
+	</li>
+        <li>
+		<p class="message_head"><cite>多点触控</cite></p>
+		<div class="message_body">
+			<p>触摸屏类型电容屏，多点触控
+
+主屏尺寸5.5英寸
+
+主屏分辨率1920x1080像素
+
+屏幕像素密度401ppi
+
+屏幕技术GFF全贴合技术</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>对比度</cite></p>
+		<div class="message_body">
+			<p>窄边框3.66mm
+
+屏幕占比71.63%
+
+其他屏幕参数阳光屏，暗光屏，对比度：1000：1，亮度：450cd/m2</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>摄像头</cite></p>
+		<div class="message_body">
+			<p>摄像头类型双摄像头（前后）
+
+后置摄像头1300万像素
+
+前置摄像头500万像素
+
+传感器类型CMOS
+
+闪光灯 LED补光灯</p>
+		</div>
+	</li>
+    <li>
+		<p class="message_head"><cite>光圈</cite></p>
+		<div class="message_body">
+			<p>光圈主f/2.2，副f/2.0
+
+摄像头特色前置四镜式镜头，后置五镜式镜头
+
+视频拍摄支持</p>
+		</div>
+	</li>
+</ol>
+<p class="collapse_buttons">
+	<a href="#" class="collpase_all_message">折叠所有</a>
+</p>
+</h4><a href="../魅族专栏.html"><h1>点击预定</h1></a>
+	</p>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>		   	
+					  	</ul>
+				  	</div>
+				</div>
+
+
+<!--模块2--脚注部分-->
+<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>欢迎光临！</h4>
+					<li>希望你在此能够挑到适合你的手机品牌和型号。</li><li>近期我们将会有更多的品牌上线，敬请期待！谢谢支持！</li>
+				</div>
+				<div class="col-md-4 col-md-push-1">
+					<h4>品牌</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="../OPPO专栏.html">oppo</a></li>
+						<li><a href="../小米专栏.html">小米</a></li>
+						<li><a href="../三星专栏.html">三星</a></li>
+						<li><a href="../魅族专栏.html">魅族</a></li>
+						<li><a href="#">iphone(还未上线，敬请期待！)</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>友情链接</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="http://www.jd.com/">京东</a></li>
+						<li><a href="http://uland.taobao.com/">淘宝</a></li>
+						<li><a href="http://www.vip.com/">唯品会</a></li>
+						<li><a href="http://hd.jumei.com/">聚美优品</a></li>
+						<li><a href="http://www.baidu.com/">百度一下</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+</body>
+</html>

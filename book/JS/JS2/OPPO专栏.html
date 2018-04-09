@@ -1,0 +1,331 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="imagetoolbar" content="no">
+	<title>OPPO专栏</title>
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+ 
+
+   
+<!--图片转换的css样式-->
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li{list-style:;}
+img{border:0;}
+.wrapper{
+	width: 1125px;
+	margin: 0 auto;
+	padding-bottom: 0px;
+}
+#focus{
+	width: 1125px;
+	height: 360px;
+	overflow: hidden;
+	position: relative;
+}
+#focus ul{
+	height: 350px;
+	position: absolute;
+	left: -6px;
+	top: -12px;
+}
+#focus ul li{
+	float: left;
+	width:1125px;
+	height: 350px;
+	overflow: hidden;
+	position: relative;
+	background: #000;
+}
+#focus ul li div{
+	position: absolute;
+	overflow: hidden;
+}
+#focus .preBtn{
+	width: 45px;
+	height: 45px;	
+	left: 0;
+	top:138.5px;
+	background:url(images/prev.png) 	no-repeat 0 0;
+	background-color:#fff;
+	cursor: pointer;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+#focus .nextBtn{
+	width: 45px;
+	height: 45px;
+	right:0px;
+	top:138.5px;
+	background:url(images/next.png) no-repeat 0 0;
+	background-color:#FFF;
+	cursor: pointer;	
+	opacity:0.4;
+	filter:alpha(opacity=40);}
+
+.title{ font-family:"黑体"; font-size:36px; text-align:center;}<!--oppo产品系列的样式-->
+	
+.birck-img{ float:none; width:100%; padding-left:52.5px; padding-right:52.5px;}
+</style>
+
+
+    
+</head>
+<body>
+
+<div class="fh5co-loader" style="display: none;"></div>
+	
+	<div id="page"><a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a><div id="fh5co-offcanvas"><ul>
+									<li class="active"><a href="index.html">主页</a></li>
+									<li><a href="精美配件.html">精美配件</a></li>
+									<li class="offcanvas-has-dropdown">
+										<a href="#">关于我们</a>
+										<ul class="dropdown">
+											<li><a href="OPPO专栏.html">oppo</a></li>
+											<li><a href="小米专栏.html">小米</a></li>
+											<li><a href="三星专栏.html">三星</a></li>
+											<li><a href="魅族专栏.html">魅族</a></li>
+										</ul>
+									</li>
+									<li><a href="zhuce.html">注册</a></li>
+									<li><a href="login.html">登录</a></li>
+								</ul></div>
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="top-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7 text-left menu-1">
+								<ul>
+									<li class="active"><a href="index.html">主页</a></li>
+									<li><a href="blog.html">网站说明</a></li>
+									<li class="has-dropdown">
+										<a href="blog.html">关于我们</a>
+										<ul class="dropdown">
+											<li><a href="OPPO专栏.html">oppo</a></li>
+											<li><a href="小米专栏.html">小米</a></li>
+											<li><a href="三星专栏.html">三星</a></li>
+											<li><a href="魅族专栏.html">魅族</a></li>
+										</ul>
+									</li>
+									<li><a href="/zz/register.php">注册</a></li>
+									<li><a href="/zz/login.php">登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+                         <marquee behavior="scroll" scrollamount="6" direction="right">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+欢迎来到手机销售网站！</marquee>
+<!--图片转换的java代码-->
+<script type="text/javascript">
+	var picsArr=new Array();//创建一个Array对象，在单个变量中存储多个值
+		picsArr[0]="images/oppo4.jpg";
+		picsArr[1]="images/OPPO1.jpg";
+		picsArr[2]="images/OPPO2.jpg";
+		picsArr[3]="images/oppo3.jpg";
+
+	var timer,index=0;	
+	window.onload=showPic;//页面加载完才执行showPic()函数
+	function showPic(){
+		document.getElementById("pic").src=picsArr[index];//返回pic的对象的引用，
+		if(index<(picsArr.length-1))
+			index++;
+		else
+			index=(index+1)%picsArr.length;
+			timer=setTimeout("showPic()",2000);//2000毫秒后执行showPic()函数
+	}
+	function showNext()
+	{
+		
+		clearTimeout(timer);//取消setTimeout("showPic()",2000)设的定时器
+		showPic();
+		
+	}
+	function showPre()
+	{
+		clearTimeout(timer);
+		showPrepic();
+		
+	}
+	function showPrepic() //向左加载图片
+	{		
+		if(index>0)
+			index--;
+		else
+			index=3;
+		document.getElementById("pic").src=picsArr[index];
+		timer=setTimeout("showPrepic()",2000);
+	}
+</script>
+
+<!--鼠标悬停图片变大-->
+<script>
+function bigImg(x){
+	x.style.height="325px";
+	x.style.width="300px";
+	}
+function normalImg(x){
+	x.style.height="225px";
+	x.style.width="200px";
+	}
+</script>
+
+<!--时间-->
+<script type="text/javascript">
+function Time_Set()
+{
+	//显示时间
+	var today = new Date(); //创建一个含系统当前日期和时间的Date对象
+	digit_clock.innerText = today.toLocaleString();//返回日期的字符串，格式为系统当前的区域设置
+}
+function btnControl_onclick()
+{
+	//控制时间显示
+	btnControl.value=="打开时钟"
+		Time_Set();
+		}	
+</script>
+
+<!--图片闪烁效果-->
+<script type="text/javascript">
+	function blink()  //blink()用于显示闪动的字符串
+	{  
+		angel.style.visibility = (angel.style.visibility == "visible") ? "hidden" :"visible";
+		//根据(angel.style.visibility == "visible")的计算结果有条件的为变量赋值，如果结果为true，就把"hidden"赋给变量，为false，把"visible"赋给变量。
+		setTimeout("blink()", 250);//每隔250毫秒执行 blink()函数
+		}
+	window.onload=function(){ blink();} //页面加载完执行函数
+</script>
+
+
+</head>
+
+<body>
+
+<!--图片转换键的设置-->
+<div class="wrapper">
+  <div id="focus"> 
+    <ul>
+      <li><a href="#" target="_blank"><img src="images/oppo4.jpg" alt="" id="pic"/></a>
+        <div class="preBtn" onClick="showPre()"></div>
+        <div class="nextBtn" onClick="showNext()"></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="title">OPPO产品系列</div>
+
+<div align="left">
+<span><font color="#000000" size="5">R系列	</font><font color="#666666" size="5">纤薄设计·至美外观</font></span>
+</div>
+<div class="dirck-img"  > 
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" border="0" src="images/R9s 玫瑰金.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" border="0" src="images/R9sk 金色.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" border="0" src="images/R9s Plus 黑色版.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/R9.jpg" onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" border="0"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<div align="left">
+<span><font color="#000000" size="5">A系列	</font><font color="#666666" size="5">潮流设计·实用体验</font></span>
+</div>
+<div>
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/A59.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/A57.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/A37.jpg"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/A33.jpg"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<div align="left">
+<span><font color="#000000" size="5">N系列	</font><font color="#666666" size="5">旋转镜头·创意拍摄</font></span>
+</div>
+<div>
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/N1.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/N3.png"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/N1-2.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img onMouseMove="bigImg(this)" onMouseOut="normalImg(this)" src="images/N3-2.jpg"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div align="right">
+<p><input type="button" id="btnControl" value="打开时钟" onClick="btnControl_onclick()" style="color:#090" /></p>
+<p id="digit_clock" style="font-size:18px; color:#090; font-weight:bold"></p>
+</div>
+
+<p> <a href="注册.html"><img id="angel" src="images/购买.jpg"/></a></p>
+
+<div><img src="images/包修.png"/></div>
+
+<footer id="fh5co-footer" role="contentinfo">
+	<div class="container">
+	<div class="row row-pb-md">
+	<div class="col-md-4 fh5co-widget">
+	<h4>欢迎光临！</h4>
+	<p>希望你在此能够挑到适合你的手机品牌和型号。近期我们将会有更多的品牌上线，敬请期待！谢谢支持！</p>
+	</div>
+	<div class="col-md-4 col-md-push-1">
+	<h4>品牌</h4>
+	<ul class="fh5co-footer-links">
+	<li><a href="OPPO专栏.html">oppo</a></li>
+	<li><a href="小米专栏.html">小米</a></li>
+	<li><a href="三星专栏.html">三星</a></li>
+	<li><a href="魅族专栏.html">魅族</a></li>
+	<li><a href="#">iphone(还未上线，敬请期待！)</a></li>
+	</ul>
+	</div>
+
+	<div class="col-md-4 col-md-push-1">
+	<h4>友情链接</h4>
+	<ul class="fh5co-footer-links">
+	<li><a href="http://www.jd.com/">京东</a></li>
+	<li><a href="http://uland.taobao.com/">淘宝</a></li>
+	<li><a href="http://www.vip.com/">唯品会</a></li>
+	<li><a href="http://hd.jumei.com/">聚美优品</a></li>
+	<li><a href="http://www.baidu.com/">百度一下</a></li>
+	</ul>
+	</div>
+
+	</div>
+	<div class="row copyright"></div>
+	</div>
+</footer>
+	
+
+<div class="gototop js-top">
+<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>  
+	
+
+
+</body></html>

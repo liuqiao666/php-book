@@ -1,0 +1,319 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>小米专栏</title>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+ 
+	</head>
+	<body>
+	
+
+
+<link href="css/global.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+/*是一个放置图片的框架样式*/
+.bannerbox{width:100%;position:relative;overflow:hidden;}
+
+/*是图片框架左右填充的距离样式*/
+.Homebanner{width:100%;position:relative;height:600px;overflow:hidden;}
+.Homebanner ul{width:100%;position:absolute;height:600px;}
+.Homebanner ul li{width:100%;height:600px;position:absolute;overflow:hidden;}
+.Homebanner ul li img{width:1900px;position:absolute;left:50%;top:0px;display:block;margin-left:-950px;}
+
+.Homeleft,.Homeright{background:#000;font-family:"宋体";width:50px;height:50px;line-height:50px;text-align:center;font-size:40px;color:#fff;position:absolute;top:45%;cursor:pointer;transition:all .2s ease;opacity:0;z-index:899999}
+.Homeleft{left:-60px;}
+.Homeright{right:-60px;}
+
+/*鼠标的效果的样式*/
+.bannerbox:hover .Homeleft{left:0px;opacity:1}
+.bannerbox:hover .Homeright{right:0px;opacity:1}
+
+
+/*是一个在图片轮播里面显示字体部分的样式。（包括了字体的大小以及颜色）*/
+.Homebannertext{position:absolute;left:0px;top:0px;width:100%;height:100%;}
+.Homebannertext img.bigimg{transform:translateY(100px);-moz-transform:translateY(100px);-ms-transform:translateY(100px);-o-transform:translateY(100px);-webkit-transform:translateY(100px);}
+.Homebannertext dl.bannerone{position:absolute;width:1180px;left:50%;margin-left:-590px;top:251px;text-align:center;z-index:9999;}
+.Homebannertext dl.bannerone dt{float:right;font-size:45px;width:750px;height:80px;margin-left:100px;line-height:75px;color:#fff;background:#eb3900;transform:translateY(100px);-moz-transform:translateY(100px);-ms-transform:translateY(100px);-o-transform:translateY(100px);-webkit-transform:translateY(100px);}
+.Homebannertext dl.bannerone dd{float:right;font-size:29px;color:#fff;background:#000;width:360px;height:60px;line-height:60px;margin-right:45px;transform:translateY(100px);-moz-transform:translateY(100px);-ms-transform:translateY(100px);-o-transform:translateY(100px);-webkit-transform:translateY(100px);}
+.Homebannertext dl.bannertwo{position:absolute;width:1180px;left:50%;top:0px;color:#fff;margin-left:-590px;z-index:9999;}
+.Homebannertext dl.bannertwo dt{padding-top:110px;position:relative;transform:translateY(100px);-moz-transform:translateY(100px);-ms-transform:translateY(100px);-o-transform:translateY(100px);-webkit-transform:translateY(100px);}
+.Homebannertext dl.bannertwo dt h3{font-size:50px;line-height:60px;font-weight:700;position:relative;}
+.Homebannertext dl.bannertwo dt p{font-size:20px;position:relative;padding-top:20px;}
+.Homebannertext dl.bannerthree{position:absolute;width:1220px;left:50%;margin-left:-610px;top:0px;}
+.Homebannertext dl.bannerthree dt{float:left;position:relative;transform:translateX(100px);-moz-transform:translateX(100px);-ms-transform:translateX(100px);-o-transform:translateX(100px);-webkit-transform:translateX(100px);}
+.Homebannertext dl.bannerthree img{display:block;position:relative;width:auto;height:auto;left:0px;margin:0px;top:0px;}
+.Homebannertext dl.bannerthree dd{width:500px;float:left;color:#fff;padding-top:170px;position:relative;padding-left:25px;transform:translateX(100px);-moz-transform:translateX(100px);-ms-transform:translateX(100px);-o-transform:translateX(100px);-webkit-transform:translateX(100px);}
+.Homebannertext dl.bannerthree dd h3{font-size:55px;font-weight:700;line-height:70px;}
+.Homebannertext dl.bannerthree dd p{font-size:20px;line-height:30px;}
+
+/*图片轮播的一个效果展示样式*/
+.bannereffect{opacity:0;filter:alpha(opacity=0);}
+
+.bannertime{transition:all .8s ease-in-out;-moz-transition:all .8s ease-in-out;-ms-transition:all .8s ease-in-out;-o-transition:all .8s ease-in-out;-webkit-transition:all .8s ease-in-out;}
+.bannertime1{transition:all .8s ease-in-out .2s;-moz-transition:all .8s ease-in-out .2s;-ms-transition:all .8s ease-in-out .2s;-o-transition:all .8s ease-in-out .2s;-webkit-transition:all .8s ease-in-out .2s;}
+.bannertime2{transition:all 1s ease-in-out .2s;-moz-transition:all 1s ease-in-out .2s;-ms-transition:all 1s ease-in-out .2s;-o-transition:all 1s ease-in-out 2s;-webkit-transition:all 1s ease-in-out .2s;}
+
+/*图片轮播的一个效果展示样式*/
+.Homebanner li.cur .Homebannertext img.bigimg{transform:translateY(0px);-moz-transform:translateY(0px);-ms-transform:translateY(0px);-o-transform:translateY(0px);-webkit-transform:translateY(0px);}
+.Homebanner li.cur .Homebannertext dl.bannerone dt{transform:translateY(0px);-moz-transform:translateY(0px);-ms-transform:translateY(0px);-o-transform:translateY(0px);-webkit-transform:translateY(0px);}
+.Homebanner li.cur .Homebannertext dl.bannerone dd{transform:translateY(0px);-moz-transform:translateY(0px);-ms-transform:translateY(0px);-o-transform:translateY(0px);-webkit-transform:translateY(0px);}
+.Homebanner li.cur .Homebannertext dl.bannertwo dt{transform:translateY(0px);-moz-transform:translateY(0px);-ms-transform:translateY(0px);-o-transform:translateY(0px);-webkit-transform:translateY(0px);}
+.Homebanner li.cur .Homebannertext dl.bannerthree dt{transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);-webkit-transform:translateX(0px);}
+.Homebanner li.cur .Homebannertext dl.bannerthree dd{transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);-webkit-transform:translateX(0px);}
+.Homebanner li.cur .bannereffect{opacity:1;filter:alpha(opacity=100);}
+
+
+/*指图片页面底部的导航栏部分*/
+.index_btn{width:100%;position:absolute;height:40px;top:560px;z-index:9999;background:#191919;}
+.index_btn ul{margin:0px auto;padding:0px;width:1180px;}
+.index_btn ul li{float:left;width:295px;height:40px;position:relative;}
+.index_btn ul li span{position:relative;z-index:999;width:294px;display:block;height:40px;}
+.index_btn ul li span a{display:block;width:294px;color:#FFF;background:#191919;cursor:pointer;font-size:14px;text-align:center;line-height:40px;border-right:1px solid #a7a7a7;float:left;height:40px;}
+.index_btn ul li span a:hover{color:#FFF;background:#e60012;}
+.index_btn ul li span a.cur{border:none;width:295px;}
+.index_btn ul li em{display:inline-block;height:40px;padding-left:30px;}
+.index_btn ul li em.btn{background:url(img/btn1.png) no-repeat left center;}
+.index_btn ul li em.btn1{background:url(img/btn3.png) no-repeat left center;}
+.index_btn ul li em.btn2{background:url(img/btn4.png) no-repeat left center;}
+.index_btn ul li em.btn3{background:url(img/btn2.png) no-repeat left center;}
+
+
+/*是指当鼠标悬浮在导航栏信息时出现的div样式*/
+.index_btnbox{width:295px;height:260px;background:#FFF;position:absolute;top:0px;left:0px;padding:20px 0px 0px 0px;}
+.index_btnbox img{display:block;margin:auto;}
+.index_btnbox p{margin:0px;padding:20px 0px 0px 19px;}
+.index_btnbox p a{display:block;float:left;width:130px;padding-bottom:5px;line-height:24px;}
+
+/*页面底部信息的一些样式（包括品牌链接这些）*/
+.row-pb-md {
+  padding-bottom: 4em !important;
+}
+.fh5co-footer{background:#efefef; width:1600px;}
+  #fh5co-footer .fh5co-widget {
+    text-align: left;
+  }
+   .col-md-4 col-md-push-1 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+  #fh5co-footer .fh5co-footer-links {
+    margin-bottom: 30px;
+  }
+
+</style>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$(".index_btn li").hover(function(){
+		$(this).find("div").stop(true).animate({top:-280},300);	 
+	},function(){
+		$(this).find("div").stop(true).animate({top:-0},300);
+	});
+	
+});
+</script>
+  
+<!--动态显示时间-->
+<marquee behavior="scroll" scrollamount="6" direction="right">
+<script type="text/javascript">
+	var week,today,week_i;
+	week = new Array("星期一","星期二","星期三","星期四","星期五","星期六","星期天");
+	today = new Date();
+	week_i = today.getDay();//返回0~6之间的一个整数，代表一周中的某一天；
+	document.write(today.toLocaleDateString()+week[week_i]);
+</script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+欢迎来到手机销售网站！</marquee>
+
+
+<!--小米手机图片轮播展示-->
+<div class="bannerbox">
+
+	<div class="Homebanner">
+		<ul>
+			
+			<li class="Load"><img src="images/6.jpg" alt="">
+				<div class="Homebannertext">
+					<dl class="bannerthree clearfix">
+						<dt class="bannereffect bannertime"></dt>
+						<dd class="bannereffect bannertime1">
+							 
+							 <h3>小米6 变焦双摄，拍人更美</h3>
+							 <p>骁龙835 + 6GB 大内存
+新一代性能怪兽          小米6率先搭载骁龙835 旗舰处理器，全球首款 10nm 商用芯片
+
+Adreno540 游戏机级图形处理器 
+• 6GB 超大内存 02.png
+• 128GB 最高可选存储 
+</p>
+						</dd>
+					</dl>
+				</div>
+			</li>
+            <li class="Load"><img src="images/note2.jpg"alt="">
+				<div class="Homebannertext">
+					<dl class="bannerthree clearfix">
+						<dt class="bannereffect bannertime"></dt>
+						<dd class="bannereffect bannertime1">
+							 
+							 <h3>小米note2 一面科技，一面艺术</h3>
+							 <p>小米Note 2 双曲面商务旗舰
+
+5.7" 双曲面柔性屏，正反面 3D 曲面玻璃 / 2256万超高像素相机
+骁龙821 性能版，可选 6GB + 128GB 
+•64GB 2799元 | •128GB 3299元
+</p>
+						</dd>
+					</dl>
+				</div>
+			</li>
+            <li class="Load"><img src="images/5s.jpg"alt="">
+				<div class="Homebannertext">
+					<dl class="bannerthree clearfix">
+						<dt class="bannereffect bannertime"></dt>
+						<dd class="bannereffect bannertime1">
+							 
+							 <h3>小米5s plus 5.7大屏双摄手机，拍照黑科技</h3>
+							 <p>高性能绝配
+骁龙 821 高配版与 6GB 大内存
+双 13MP 高画质相机
+照片细腻, 理所当然
+•标准版
+4GB 内存 + 64GB 闪存 
+2299元 
+•高配版
+6GB 内存 + 128GB 闪存
+2599元 
+
+</p>
+						</dd>
+					</dl>
+				</div>
+			</li>
+		</ul>
+		<div class="Homeleft"><</div>
+		<div class="Homeright">></div>
+		<div class="Homedot"><a href="javascript:;" class="cur">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></div>
+	</div>
+  
+
+
+<!--图片页面底部的导航栏部分-->    
+	<div class="index_btn">
+		<ul>
+			 <li><span><a href="#"><em class="btn">小米明星单品</em></a></span>
+			 <div class="index_btnbox index_btnanli" style="top: 0px;">
+				<img src="images/timg2.4.jpg" alt="小米明星单品" width="258" height="112">
+				<p class="clearfix">
+					<a href="#">小米6</a>
+					<a href="#">小米note2</a>
+					<a href="#">小米5s plus</a>
+				</p>
+			 </div>
+			 </li>
+			 <li><span><a href="#"><em class="btn1">售后政策</em></a></span>
+			 <div class="index_btnbox">
+				<img src="images/timg2.3.jpg" alt="售后政策" width="258" height="112">
+				<p class="clearfix">
+					<a href="#">预约维修服务</a>
+					<a href="#">7天无理由退货</a>
+					<a href="#">15天免费换货</a>
+					
+				</p>
+			 </div>
+			 </li>
+			 <li><span><a href="#"><em class="btn2">帮助中心</em></a></span>
+			 <div class="index_btnbox">
+				<img src="images/timg2.2.jpg" alt="帮助中心" width="258" height="112">
+				<p class="clearfix">
+					<a href="#" title="账户管理">账户管理</a>
+					<a href="#" title="购物指南">购物指南</a>
+					<a href="#" title="订单操作">订单操作</a>
+				</p>
+			 </div>
+			 </li>
+
+			 <li><span><a href="index.html" class="cur"><em class="btn3">返回主页</em></a></span>
+			 <div class="index_btnbox">
+				<img src="images/timg1.jpg"" alt="返回主页" width="258" height="112">
+				<p class="clearfix">
+                   <a href="/zz/login.php" title="login">登录</a>
+                   <a href="/zz/register.php" title="zhuce">注册</a>
+                   <a href="魅族专栏.html" title="魅族专栏">魅族</a>
+                   <a href="三星专栏.html" title="三星专栏">三星</a>
+				  <a href="OPPO专栏.html" title="OPPO专栏">OPPO</a>
+				</p>
+			 </div>
+			 </li>
+		</ul>
+	</div>
+    
+</div>
+</div>
+
+		
+	
+
+			
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>欢迎光临！</h4>
+					<p>希望你在此能够挑到适合你的手机品牌和型号。近期我们将会有更多的品牌上线，敬请期待！谢谢支持！</p>
+				</div>
+				<div class="col-md-4 col-md-push-1">
+					<h4>品牌</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="OPPO专栏.html">oppo</a></li>
+						<li><a href="小米专栏.html">小米</a></li>
+						<li><a href="三星专栏.html">三星</a></li>
+						<li><a href="魅族专栏.html">魅族</a></li>
+						<li><a href="#">iphone(还未上线，敬请期待！)</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>友情链接</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="http://www.jd.com/">京东</a></li>
+						<li><a href="http://uland.taobao.com/">淘宝</a></li>
+						<li><a href="http://www.vip.com/">唯品会</a></li>
+						<li><a href="http://hd.jumei.com/">聚美优品</a></li>
+						<li><a href="http://www.baidu.com/">百度一下</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>    
+	
+
+
+</body></html>

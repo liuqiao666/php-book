@@ -1,0 +1,386 @@
+﻿<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="imagetoolbar" content="no">
+	<title>JS-魅族专栏</title>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+    <!--adRotator显示图片的脚注样式-->
+    <link href="css/adRotator.css" rel="stylesheet" type="text/css">
+     <!--飞入购物车动画css-->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+ 	<!--鼠标悬浮改变图片透明度js-->   
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script text="text/javascript">
+        const OUT_OPACITY = 0.4;			//初始状态
+        const OVER_OPACITY = 1.0;			//完全显示
+        $(function() {
+            $("div#miniGallery img").css("opacity", OUT_OPACITY)	//设置透明度
+                .hover(								//使用复合事件
+                    function () {
+                        $(this).css({opacity:OVER_OPACITY});
+                    },
+                    function () {
+                        $(this).css({opacity:OUT_OPACITY});
+                    }
+                );
+            });
+</script>
+    
+<!--超链接的显示样式-->  
+<style type="text/css">
+a:link { 
+color:green; 
+text-decoration:underline; 
+} 
+a:visited { 
+color:yellow;
+text-decoration:none; 
+} 
+a:hover { 
+color:red; 
+text-decoration:none; 
+} 
+a:active { 
+color:#000000; 
+text-decoration:none; 
+} 
+</style>
+	</head>
+	<body>
+
+<!--导航栏部分-->
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="top-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7 text-left menu-1">
+								<ul>
+									<li class="active"><a href="index.html">主页</a></li>
+									<li><a href="精美配件.html">精美配件</a></li>
+									<li class="has-dropdown">
+										<a href="#">关于我们</a>
+										<ul class="dropdown">
+											<li><a href="OPPO专栏.html">oppo</a></li>
+											<li><a href="小米专栏.html">小米</a></li>
+											<li><a href="三星专栏.html">三星</a></li>
+											<li><a href="魅族专栏.html">魅族</a></li>
+										</ul>
+									</li>
+									<li><a href="/zz/register.php">注册</a></li>
+									<li><a href="/zz/login.php">登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+<!--动态显示时间-->
+<marquee behavior="scroll" scrollamount="6" direction="right">
+<script type="text/javascript">
+	var week,today,week_i;
+	week = new Array("星期一","星期二","星期三","星期四","星期五","星期六","星期天");
+	today = new Date();
+	week_i = today.getDay();//返回0~6之间的一个整数，代表一周中的某一天；
+	document.write(today.toLocaleDateString()+week[week_i]);
+</script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+欢迎来到手机销售网站！</marquee>
+
+<!--模块1-->
+	<br><br><br><br><div id="fh5co-content" class="fh5co-no-pd-top">
+		<div class="container">
+			<div class="row animate-box fadeInUp animated-fast">
+				<div class="col-md-12 col-md-offset-0 text-center fh5co-heading">
+					<a href="index.html"><h2><span>魅族专栏</span></h2></a>
+				</div>
+			</div>
+            
+<!--动态图片轮播-->           
+			<div class="row">
+				<div class="col-md-9 col-padded-right">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="fh5co-blog animate-box fadeInUp animated-fast">
+								<div class="blog-text text-center"><img src="images/adRotator_4.jpg" alt="广告图片" id="Rotator">
+<div class="Rotator_bg">
+<div class="number" id="fig_1" onClick="show(1);">1</div>
+<div class="number" id="fig_2" onClick="show(2);">2</div>
+<div class="number" id="fig_3" onClick="show(3);">3</div>
+<div class="numberOver" id="fig_4" onClick="show(4);">4</div>
+<div class="number" id="fig_5" onClick="show(5);">5</div>
+									</div>
+								</div> 
+							</div>
+						</div>
+
+<!--页面最右边的购物车的部分-->                      
+             <div class="cart-sidebar">
+            <div class="cart">
+                <i id="icon-cart"></i>
+                <span>购物车</span>
+            </div>
+        </div>
+        <div id="tip">成功加入购物车！</div>
+   
+<!--模块2--四种手机型号的介绍，前两个有子页面-->     
+						<div class="col-md-6">
+							<div class="fh5co-blog animate-box fadeInUp animated-fast">
+								<div class="title text-center">
+									<span class="posted-on">魅蓝E2</span>
+									<h3><a href="#">MADE IN CHINA</a></h3>
+									<span class="category">Meizu</span>
+								</div>
+								<a href="#"><img class="img-responsive" src="images/1.jpg" alt=""></a>
+								<div class="blog-text text-center">
+									<p>12期免息每天不到4元 选手柄电源音响等</p><a href="魅蓝子页/魅蓝E2.html"><P>点击此处查看详情</P></a>
+                                                        <a href="javascript:void(0);" class="button orange addcart">加入购物车</a>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fh5co-blog animate-box fadeInUp animated-fast">
+								<div class="title text-center">
+									<span class="posted-on">魅蓝note5</span>
+									<h3><a href="#">MADE IN CHINA</a></h3>
+									<span class="category">Meizu</span>
+								</div>
+								<a href="#"><img class="img-responsive" src="images/2.jpg" alt=""></a>
+								<div class="blog-text text-center">
+									<p>12期免息 保修3年 下单即送9大豪礼</p><a href="魅蓝子页/魅蓝note5.html"><P>点击此处查看详情</P></a>
+                                      <a href="javascript:void(0);" class="button orange addcart">加入购物车</a>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fh5co-blog animate-box fadeInUp animated-fast">
+								<div class="title text-center">
+									<span class="posted-on">魅族MX6</span>
+									<font  color="#FF99CC" size="+4"><h3><a href="#">MADE IN CHINA</a></h3></font>
+									<span class="category">Meizu</span>
+								</div>
+								<a href="#"><img class="img-responsive" src="images/3.jpg" alt=""></a>
+								<div class="blog-text text-center">
+									<p>12期免息 套餐任选更划算</p><a href="#"><P>点击此处查看详情</P></a>  <a href="javascript:void(0);" class="button orange addcart">加入购物车</a>
+								</div> 
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fh5co-blog animate-box fadeInUp animated-fast">
+								<div class="title text-center">
+									<span class="posted-on">魅族PRO 6plus</span>
+									<h3><a href="#">MADE IN CHINA</a></h3>
+									<span class="category">Meizu</span>
+								</div>
+								<a href="#"><img class="img-responsive" src="images/4.jpg" alt=""></a>
+								<div class="blog-text text-center">
+									<p>22点前付款当天发 顺丰加急 更快</p><a href="#"><P>点击此处查看详情</P></a>  <a href="javascript:void(0);" class="button orange addcart">加入购物车</a>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+<!--模块3  (1)--页面右边的那一部分--产品简介-->				
+				<aside id="sidebar">
+					<div class="col-md-3">
+						<div class="side animate-box fadeInUp animated-fast">
+							<div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<h2><span>产品简介</span></h2>
+							</div>
+							<div class="fh5co-staff">
+								<img src="images/user-2.jpg" alt="Free HTML5 Templates by FreeHTML5.co">
+								<h3>魅族(MEIZU)</h3>
+								<p>魅族（MEIZU）科技成立于2003年3月，是国内知名的智能手机厂商，总部位于中国广东省珠海市。魅族是多媒体终端行业知名品牌，是以生产MP3随身听、手机为主的多媒体终端科技公司，主要产品有魅族PRO6 Plus、魅族PRO6S、魅族MX6、魅族PRO6、魅族PRO5、魅族MX5、魅蓝E、 魅蓝metal、魅蓝note5、魅蓝note3、魅蓝note2、魅蓝3S、魅蓝5s等系列手机。</p>
+							</div>
+						</div>
+                        
+<!--模块3（2）--经典产品-->                    
+						<div class="side animate-box fadeInUp animated-fast">
+							<div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<h2><span>经典产品</span></h2>
+							</div>
+							<div class="blog-entry">
+								<a href="#">
+									<img src="images/blog-5.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">E2</span>
+										<h3>采用全金属外壳更好看，更耐用！</h3>
+									</div>
+								</a>
+							</div>
+							<div class="blog-entry">
+								<a href="#">
+									<img src="images/blog-6.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">M8</span>
+										<h3>魅族M8是魅族公司第一个手机产品！</h3>
+									</div>
+								</a>
+							</div>
+							<div class="blog-entry">
+								<a href="#">
+									<img src="images/blog-7.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">MX四核</span>
+										<h3>魅族MX四核秉承简约精美的设计风格！</h3>
+									</div>
+								</a>
+						</div>
+                            <div class="blog-entry">
+								<a href="#">
+									<img src="images/blog-11.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">MX2</span>
+										<h3>MX2采用了领先的独立芯片群配置！</h3>
+									</div>
+								</a>
+							</div>
+						<div class="side animate-box fadeInUp animated-fast">
+							<br><br><br><div class="col-md-12 col-md-offset-0 text-center fh5co-heading fh5co-heading-sidebar">
+								<br><br><br><br><h2><span>最热产品</span></h2>
+							</div>
+                            <div class="blog-entry">
+								<a href="#">
+									<img src="images/blog-8.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">PRO 6 Plus</span>
+										<h3>mTouch活体指纹识别</h3>
+									</div>
+								</a>
+							</div>                         
+                            <a href="#">
+                            <div class="blog-entry">
+									<img src="images/blog-9.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">PRO 7</span>
+										<h3>魅族PRO 7（移动4G）采用1200万像素的IMX386</h3>
+									</div>
+								</a>
+							</div>
+							<div class="blog-entry">
+								<a href="#">
+									<img src="images/blog-10.jpg" class="img-responsive" alt="">
+									<div class="desc">
+										<span class="date">魅蓝5s</span>
+										<h3>魅族魅蓝5s（全网通）mTouch指纹支付</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</div>
+
+<!--模块4--魅族手机展示:鼠标悬浮时改变图片透明度-->
+	<div id="fh5co-instagram">
+		<div class="container">
+			<div class="row animate-box fadeInUp animated-fast">
+				<div class="col-md-12 col-md-offset-0 text-center fh5co-heading">
+					<h2><span>魅族手机展示</span></h2>
+				</div>
+			</div>
+		</div>
+                    <div id="miniGallery">
+        <img src="images/image1.jpg" width="200" style="opacity: 0.4;">
+        <img src="images/image2.jpg" width="200" style="opacity: 0.4;">
+        <img src="images/image3.jpg" width="200" style="opacity: 0.4;">
+        <img src="images/image4.jpg" width="215" style="opacity: 0.4;">
+        <img src="images/image5.jpg" width="215" style="opacity: 0.4;">
+        <img src="images/image6.jpg" width="215" style="opacity: 0.4;">
+		<img src="images/image7.jpg" width="215" style="opacity: 0.4;">
+    			</div> 
+			</div>
+		</div>
+	
+<!--模块5--脚注部分-->
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>欢迎光临！</h4>
+					<p>希望你在此能够挑到适合你的手机品牌和型号。近期我们将会有更多的品牌上线，敬请期待！谢谢支持！</p>
+				</div>
+				<div class="col-md-4 col-md-push-1">
+					<h4>品牌</h4>
+					<ul class="fh5co-footer-links">
+																	<li><a href="OPPO专栏.html">oppo</a></li>
+											<li><a href="小米专栏.html">小米</a></li>
+											<li><a href="三星专栏.html">三星</a></li>
+						<li><a href="魅族专栏.html">魅族</a></li>
+						<li><a href="#">iphone(还未上线，敬请期待！)</a></li>
+					</ul>
+				</div>
+                
+				<div class="col-md-4 col-md-push-1">
+					<h4>友情链接</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="http://www.jd.com/">京东</a></li>
+						<li><a href="http://uland.taobao.com/">淘宝</a></li>
+						<li><a href="http://www.vip.com/">唯品会</a></li>
+						<li><a href="http://hd.jumei.com/">聚美优品</a></li>
+						<li><a href="http://www.baidu.com/">百度一下</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	<!-- jQuery --框架>
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+    <!--图片滑动的js--> 
+    <script src="js/adRotator.js" type="text/javascript"></script>  
+    <!--飞入购物车动画js-->
+     <script type="text/javascript" src="js/jquery2.js"></script>
+        <script src="js/jquery.fly.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var offset = $("#icon-cart").offset();
+                $(".addcart").click(function(event) {
+                    var img = $(this).parent().children('img').attr('src');//获取当前点击图片链接
+                    var flyer = $('<img class="img-responsive"src="' + img + '">');//抛物体对象
+                    flyer.fly({
+                        start: {
+                            left: event.pageX, //抛物体起点横坐标
+                            top: event.pageY////抛物体起点纵坐标
+                        },
+                        end: {
+                            left: offset.left + 10, //抛物体终点横坐标
+                            top: offset.top + 10, //抛物体终点纵坐标
+                        },
+                        onEnd: function() {
+                            $("#tip").show().animate({width: '200px'}, 300).fadeOut(500);//成功加入购物车动画效果
+                            this.destory();//销毁抛物体
+                        }
+                    });
+                });
+            });
+        </script>
+	
+
+
+</body></html>

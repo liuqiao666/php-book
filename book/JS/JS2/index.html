@@ -1,0 +1,258 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+a:link { 
+color:green; 
+text-decoration:underline; /*点击的一瞬间，定义文本下的一条线*/
+} 
+a:visited { 
+color:yellow;
+text-decoration:none; /*	表示是超链接，默认。定义标准的文本。*/
+} 
+a:hover { 
+color:red; 
+text-decoration:none; /*	鼠标悬停，默认。定义标准的文本。*/
+} 
+a:active { 
+color:#000000; 
+text-decoration:none; /*	鼠标点击后，默认。定义标准的文本。*/
+} 
+</style>
+
+	</head>
+	<body>
+    
+<!--菜单栏的样式-->
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+			<div class="row">
+				<div class="top-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-7 text-left menu-1">
+								<ul>
+									<li class="active"><a href="index.html">主页</a></li>
+									<li><a href="精美配件.html">精美配件</a></li>
+									<li class="has-dropdown">
+										<a href="#">关于我们</a>
+										<ul class="dropdown">
+											<li><a href="OPPO专栏.html">oppo</a></li>
+											<li><a href="小米专栏.html">小米</a></li>
+											<li><a href="三星专栏.html">三星</a></li>
+											<li><a href="魅族专栏.html">魅族</a></li>
+										</ul>
+									</li>
+									<li><a href="/zz/register.php">注册</a></li>
+									<li><a href="/zz/login.php">登录</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+  
+<!--动态显示时间-->
+<marquee behavior="scroll" scrollamount="6" direction="right">
+<script type="text/javascript">
+	var week,today,week_i;
+	week = new Array("星期一","星期二","星期三","星期四","星期五","星期六","星期天");
+	today = new Date();
+	week_i = today.getDay();//返回0~6之间的一个整数，代表一周中的某一天；
+	document.write(today.toLocaleDateString()+week[week_i]);
+</script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+欢迎来到手机销售网站！</marquee>
+
+<!--模块1-->
+			<div class="row">
+				<div class="col-xs-12 text-center menu-2">
+					<div id="fh5co-logo">
+						<h1>
+							<a href="index.html">
+							欢迎光临<span>.</span><br>
+							<small>手机销售网站</small>
+							</a>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+<!--模块2--图片和文字的动态显示-->
+	<aside id="fh5co-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="flexslider animate-box">
+						<ul class="slides">
+					   	<li style="background-image: url(images/img_bg_1.jpg);">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-10 col-md-offset-1 slider-text">
+						   				<div class="slider-text-inner">
+						   					<h1>Hello!欢迎来到这里，你对你的手机还满意吗？</h1>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>
+					   	<li style="background-image: url(images/img_bg_2.jpg);">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-10 col-md-offset-1 slider-text">
+						   				<div class="slider-text-inner">
+						   					<h1>来到这里，你想要什么类型的手机</h1>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>
+					   	<li style="background-image: url(images/img_bg_3.jpg);">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-10 col-md-offset-1 slider-text">
+						   				<div class="slider-text-inner">
+						   					<h1>你知道什么类型的手机性能较好，性价比较高吗?</h1>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>		   	
+					  	</ul>
+				  	</div>
+				</div>
+                
+<!--模块3--鼠标悬浮时显示文字-->
+				<div class="col-md-4">
+					<a href="#" class="featured text-center animate-box" style="background-image: url(images/img_bg_5.jpg);">
+						<div class="desc">
+							<h3>本店爆款：魅蓝5s 全网通公开版 3GB+32GB 月光银 移动联通电信4G手机 双卡双待</h3><br><h1>￥999.00</h1>
+						</div>
+					</a>
+					<a href="#" class="featured text-center animate-box" style="background-image: url(images/img_bg_4.jpg);">
+						<div class="desc">
+							<h3> 降价通知：红米 4X 全网通版 2GB+16GB 四种色 移动联通电信4G手机</h3><br><h1>￥699.00</h1>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+<!--模块4--品牌介绍-->
+	<div id="fh5co-blog-popular">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-12 col-md-offset-0 text-center fh5co-heading">
+					<h2><span>品牌介绍</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="fh5co-blog animate-box">
+						<a href="#"><img class="img-responsive" src="images/blog-1.jpg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="OPPO专栏.html">OPPO</a></h3>
+						</div> 
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="fh5co-blog animate-box">
+						<a href="#"><img class="img-responsive" src="images/blog-2.jpg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="小米专栏.html">小米</a></h3>
+						</div> 
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="fh5co-blog animate-box">
+						<a href="#"><img class="img-responsive" src="images/blog-3.jpg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="三星专栏.html">三星</a></h3>
+						</div> 
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="fh5co-blog animate-box">
+						<a href="#"><img class="img-responsive" src="images/blog-4.jpg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="魅族专栏.html">魅族</a></h3>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--模块5--脚注部分-->
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>欢迎光临！</h4>
+					<p>希望你在此能够挑到适合你的手机品牌和型号。近期我们将会有更多的品牌上线，敬请期待！谢谢支持！</p>
+				</div>
+				<div class="col-md-4 col-md-push-1">
+					<h4>品牌</h4>
+					<ul class="fh5co-footer-links">
+					<li><a href="OPPO专栏.html">oppo</a></li>
+					<li><a href="小米专栏.html">小米</a></li>
+					<li><a href="三星专栏.html">三星</a></li>
+					<li><a href="魅族专栏.html">魅族</a></li>
+					<li><a href="#">iphone(还未上线，敬请期待！)</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 col-md-push-1">
+					<h4>友情链接</h4>
+					<ul class="fh5co-footer-links">
+						<li><a href="http://www.jd.com/">京东</a></li>
+						<li><a href="http://uland.taobao.com/">淘宝</a></li>
+						<li><a href="http://www.vip.com/">唯品会</a></li>
+						<li><a href="http://hd.jumei.com/">聚美优品</a></li>
+						<li><a href="http://www.baidu.com/">百度一下</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="row copyright"></div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints-- Flexslider --模块2--图片和文字的动态显示的js代码-->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
